@@ -30,15 +30,15 @@ const getCommitIDsFromCommand = (command) => {
 
 module.exports = {
 	latest: () => {
-		const latestCommitInArr = getCommitIDsFromCommand(GIT_COMMANDS[latestCommit]);
+		const latestCommitInArr = getCommitIDsFromCommand(GIT_COMMANDS['latestCommit']);
 		
 		if(latestCommitInArr.length < 1) {
-			throw new Error(ERROR_MESSAGES[getLatestCommitFailed]);
+			throw new Error(ERROR_MESSAGES['getLatestCommitFailed']);
 		}
 
 		return latestCommitInArr[0];
 	},
 	all: () => {
-		return getCommitIDsFromCommand(GIT_COMMANDS[allCommits]);
+		return getCommitIDsFromCommand(GIT_COMMANDS['allCommits']);
 	}
 }
