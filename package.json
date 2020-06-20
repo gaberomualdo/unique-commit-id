@@ -1,7 +1,7 @@
 {
   "name": "unique-commit-id",
   "version": "0.1.0",
-  "description": "Get a short unique commit ID for commits on Git repositories.",
+  "description": "Get short unique IDs for commits on Git repositories.",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"No tests \" && exit 0"
