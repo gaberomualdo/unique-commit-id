@@ -21,7 +21,7 @@ npm install unique-commit-id
 or:
 
 ```
-yarn install unique-commit-id
+yarn add unique-commit-id
 ```
 
 ## Basic Example
@@ -53,6 +53,10 @@ Similar to the argument in the ```ucid.latest(repoPath)``` function, the optiona
 ## More Example Usages
 
 Unique
+
+## Tests
+
+make sure the parent directory of the clone of this repo is not a git repo
 
 ## Tech Stack
 

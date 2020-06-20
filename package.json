@@ -2,9 +2,10 @@
   "name": "unique-commit-id",
   "version": "0.1.0",
   "description": "Get short unique IDs for commits on Git repositories.",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"No tests \" && exit 0"
+    "test": "mocha test/",
+    "test-with-coverage": "nyc mocha test/"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/xtrp/unique-commit-id/issues"
   },
-  "homepage": "https://github.com/xtrp/unique-commit-id#readme"
+  "homepage": "https://github.com/xtrp/unique-commit-id#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0"
+  }
 }
