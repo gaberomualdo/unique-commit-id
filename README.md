@@ -1,8 +1,5 @@
-# Unique Commit ID
-Get a unique ID for each commit from the current Git repository.
-
 <p align="center">
-    <img src="logo.png" height="80" alt="Unique Commit ID">
+    <img src="logo.png" width='600' max-width='100%' alt="Unique Commit ID">
 </p>
 <p align="center">
     <a href="https://github.com/xtrp/unique-commit-id/"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/xtrp/unique-commit-id"></a>
