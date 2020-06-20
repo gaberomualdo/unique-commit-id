@@ -8,7 +8,7 @@
     <a href="https://www.npmjs.com/package/unique-commit-id/"><img alt="NPM Downloads" src="https://img.shields.io/npm/dw/unique-commit-id"></a>
 </p>
 
-Get a short unique commit ID for commits on Git repositories.
+Get short unique IDs for commits on Git repositories.
 
 ## Download
 
