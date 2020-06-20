@@ -1,1 +1,0 @@
-Several subdirectories of this folder are initialized as Git repositories. This is to make it easier to run tests with preset expected values for each repository.
