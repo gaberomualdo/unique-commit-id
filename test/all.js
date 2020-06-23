@@ -36,6 +36,12 @@ describe('Unique Commit ID .all Function', () => {
       }).to.throw(`Specified working directory 'test/directory_that_does_not_exist' does not exist.`);
     });
   });
+
+  /*
+
+  Some Git installations do not throw an error when attempting to log from a repo that doesn't have any commits.
+  This test has therefore been commented until any further review.
+
   describe('With a repository that is malformed (with no commits)', () => {
     it('Should throw an error', () => {
       expect(() => {
@@ -43,4 +49,6 @@ describe('Unique Commit ID .all Function', () => {
       }).to.throw(`fatal: your current branch 'master' does not have any commits yet`);
     });
   });
+
+  */
 });
