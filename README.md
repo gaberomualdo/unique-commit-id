@@ -7,6 +7,7 @@
     <a href="https://github.com/xtrp/unique-commit-id/"><img alt="GitHub stars" src="https://img.shields.io/github/stars/xtrp/unique-commit-id?style=social"></a>
     <a href="https://github.com/xtrp"><img alt="GitHub followers" src="https://img.shields.io/github/followers/xtrp?label=Follow%20Fred%20Adams&style=social"></a>
     <a href="https://www.npmjs.com/package/unique-commit-id/"><img alt="NPM Downloads" src="https://img.shields.io/npm/dw/unique-commit-id"></a>
+    <img alt="Build Status" src="https://travis-ci.com/xtrp/unique-commit-id.svg?token=QZcgzzn9v2iTArb6wSyC&branch=master">
 </p>
 
 Get short unique IDs for commits on Git repositories.
