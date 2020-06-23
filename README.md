@@ -1,6 +1,7 @@
 <p align="center">
     <img src="logo/logo.png" width='525' max-width='100%' alt="Unique Commit ID">
 </p>
+
 <p align="center">
     <a href="https://github.com/xtrp/unique-commit-id/"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/xtrp/unique-commit-id"></a>
     <a href="https://github.com/xtrp/unique-commit-id/"><img alt="GitHub stars" src="https://img.shields.io/github/stars/xtrp/unique-commit-id?style=social"></a>
