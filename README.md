@@ -52,34 +52,24 @@ The returned array is a list of Strings of commit IDs, with the first commit bei
 
 Similar to the argument in the ```ucid.latest(repoPath)``` function, the optional ```repoPath``` argument is used to specify a path to the Git repo to get the latest commit ID from. The ```repoPath``` can link to anywhere inside a Git repo in which the ```git``` command can successfully be run and used in a repository. If not specified, the function will simply get the latest commit ID from the Git repo in the current directory.
 
-## More Example Usages
-
-Unique
-
 ## Tests
 
-make sure the parent directory of the clone of this repo is not a git repo
+Run ```npm run test``` to run tests. To see test coverage along with running tests, run ```npm run test-with-coverage```.
 
-## Tech Stack
+Make sure Git is installed on the machine running tests and that the ```git``` command is accessible.
 
- - HTML, CSS, and Javascript (ES6) &mdash; Public Site
- - PHP &mdash; Public Routes to Update Cases (includes web scraping for cases) and Press Video Data
- - Node.js/Express.js &mdash; Local web server to scrape W.H.O. site for latest press video
- - Python &mdash; Cronjobs to request PHP servers and local servers
+There is a test case for testing various functions in a directory that is not a Git repo. For this, the parent directory of the clone of this repo is used. So, **make sure the parent directory of the clone of this repo is not a git repo**.
 
 ## Third Party Software Used
 
- - Various NPM packages including Express.js, Puppeteer, and more
- - Various Python/PyPi modules including requests, scheduler, and more
- - [NewsAPI](https://newsapi.org/) for fetching latest news
- - [Moment.js](https://momentjs.com/) for displaying dates and times nicely
+ - Mocha and Chai for testing and assertion
+ - NYC for test coverage
 
 ## File Structure
 
- - `cronjobs` &mdash; Python programs to create services that run periodically to update data for the site.
- - `scrapers` &mdash; Web scrapers to scrape third-party sites for data.
- - `site` &mdash; The main frontend site written in plain HTML, CSS, and JavaScript.
- - `site/server` &mdash; Files which run on the server to update public data for the frontend site. These files are then called/requested by the cronjobs.
+ - `test` &mdash; includes tests and test directories that are run with `npm run test`.
+ - `src` &mdash; the main code for the package.
+ - `logo` &mdash; used at the top of the README.
 
 ## License and Credits
 
