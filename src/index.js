@@ -1,9 +1,14 @@
 const childProcess = require('child_process');
 const fs = require('fs');
 
-const GIT_COMMANDS = {
-  latestCommit: 'git log --abbrev-commit -1',
-  allCommits: 'git log --abbrev-commit',
+const GIT_COMMAND_DATA = {
+  latestCommit: 'git log -1',
+  allCommits: 'git log',
+  abbreviateFlag: '--abbrev-commit',
+};
+
+const DEFAULT_OPTIONS = {
+  abbreviate: true,
 };
 
 const getCommitIDsFromCommand = (command, workingDir) => {
@@ -49,13 +54,38 @@ const getCommitIDsFromCommand = (command, workingDir) => {
   return commitIDs;
 };
 
+const createCommand = (command, options) => {
+  options = evaluateOptions(options);
+
+  if (options.abbreviate) {
+    return [command, GIT_COMMAND_DATA['abbreviateFlag']].join(' ');
+  }
+
+  return command;
+};
+
+const evaluateOptions = (options) => {
+  const toReturn = {};
+  Object.keys(DEFAULT_OPTIONS).forEach((key) => {
+    if (options.hasOwnProperty(key)) {
+      toReturn[key] = options[key];
+    } else {
+      toReturn[key] = DEFAULT_OPTIONS[key];
+    }
+  });
+
+  return toReturn;
+};
+
 module.exports = {
-  latest: (repoDir = './') => {
-    const latestCommitAsArr = getCommitIDsFromCommand(GIT_COMMANDS['latestCommit'], repoDir);
+  latest: (repoDir = './', options = {}) => {
+    const command = createCommand(GIT_COMMAND_DATA['latestCommit'], options);
+    const latestCommitAsArr = getCommitIDsFromCommand(command, repoDir);
     return latestCommitAsArr[0];
   },
-  all: (repoDir = './') => {
-    const commitsLatestToFirst = getCommitIDsFromCommand(GIT_COMMANDS['allCommits'], repoDir);
+  all: (repoDir = './', options = {}) => {
+    const command = createCommand(GIT_COMMAND_DATA['allCommits'], options);
+    const commitsLatestToFirst = getCommitIDsFromCommand(command, repoDir);
 
     const commitsFirstToLatest = commitsLatestToFirst.reverse();
     return commitsFirstToLatest;
