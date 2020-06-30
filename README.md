@@ -30,7 +30,7 @@ yarn add unique-commit-id
 
 Basic example to get unique ID of the latest commit on the current repository:
 
-```
+```javascript
 const ucid = require('unique-commit-id');
 
 const latestCommit = ucid.latest(); # ex: '01ef00a'
