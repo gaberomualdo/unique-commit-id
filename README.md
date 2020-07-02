@@ -40,17 +40,35 @@ console.log('Latest commit: ' + latestCommit);
 
 ## Get ID of Latest Commit
 
-The ```ucid.latest(repoPath)``` function is used to get the ID of the latest commit in a repository.
+The ```ucid.latest([repoPath], [options])``` function is used to get the ID of the latest commit in a repository.
 
 The optional ```repoPath``` argument is used to specify a path to the Git repo to get the latest commit ID from. The ```repoPath``` can link to anywhere inside a Git repo in which the ```git``` command can successfully be run and used in a repository. If not specified, the function will simply get the latest commit ID from the Git repo in the current directory.
 
 ## Get ID of All Commits
 
-The ```ucid.all(repoPath)``` function is used to get an array of IDs of commits in a repository.
+The ```ucid.all([repoPath], [options])``` function is used to get an array of IDs of commits in a repository.
 
 The returned array is a list of Strings of commit IDs, with the first commit being at the first index, and the latest commit being at the last index.
 
-Similar to the argument in the ```ucid.latest(repoPath)``` function, the optional ```repoPath``` argument is used to specify a path to the Git repo to get the latest commit ID from. The ```repoPath``` can link to anywhere inside a Git repo in which the ```git``` command can successfully be run and used in a repository. If not specified, the function will simply get the latest commit ID from the Git repo in the current directory.
+Similar to the argument in the ```ucid.latest``` function, the optional ```repoPath``` argument is used to specify a path to the Git repo to get the latest commit ID from. The ```repoPath``` can link to anywhere inside a Git repo in which the ```git``` command can successfully be run and used in a repository. If not specified, the function will simply get the latest commit ID from the Git repo in the current directory.
+
+# ```options``` argument
+
+The ```options``` argument in some functions is an object which can include the following options:
+
+ - ```abbreviate``` &mdash; default: ```true```. When set to ```false```, commit IDs are not abbreviated and are returned at their full length.
+
+Here is an example function call with an options argument:
+
+```javascript
+const ucid = require('unique-commit-id');
+
+const latestCommitFull = ucid.latest('./', {
+  abbreviate: false
+});
+
+console.log('Latest commit in full length: ' + latestCommit);
+```
 
 ## Tests
 

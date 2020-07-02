@@ -1,6 +1,6 @@
 {
   "name": "unique-commit-id",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "description": "Get short unique IDs for commits on Git repositories.",
   "main": "src/index.js",
   "scripts": {
