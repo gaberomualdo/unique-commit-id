@@ -91,6 +91,6 @@ There is a test case for testing various functions in a directory that is not a 
 
 ## License and Credits
 
-Unique Commit ID was built solely by web developer and student [Fred Adams](https://xtrp.io/).
+Unique Commit ID was built solely by web developer and student [Gabriel Romualdo](https://xtrp.io/).
 
 The code is completely OSS and is MIT Licensed. See LICENSE.txt for details.
